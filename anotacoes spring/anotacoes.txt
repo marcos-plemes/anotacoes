@@ -1,0 +1,50 @@
+No Framework Spring, um Controller é uma classe responsavel pela preparação de um modelo Map com dados a serem exibidos pela view e pela escolha da view correta
+
+@Controller     cria um Map do model object e encontra uma view
+
+@RestController     simplesmente retorna o objeto e os dados do objeto são gravados diretamente na resposta HTTP como JSON ou XML
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@EnableAutoConfiguration     ativa o recurso de configuração automatica de acordo com as dependencias criadas
+
+@ComponentScan      utilizada em classes de configuração indicando quais pacotes ou classes devem ser escaneadas pelo Spring para que essa configuração funcione
+
+@Configuration      indica ao Spring Framework que deve invocar aquele metodo e gerenciar o objeto retornado por ele, ou seja, agora este objeto pode ser injetado em qualquer ponto da sua aplicação
+
+@SpringBootApplication      Uma combinação das anotações @EnableAutoConfiguration, @ComponentScan e @Configuration. Desse modo, não precisamos instalar um servidor web, pois o Spring Boot ja vem com um servidor Tomcat incorporado
+
+@Component      indica que uma classe vai ser gerenciada pelo container do Spring
+
+@Autowired      define um ponto onde a injeção da dependencia sera realizada 
+
+A injeção de dependencia tem o proposito de evitar o acoplamento de codigo numa aplicação, e a proveniencia de classes que um objeto precisa sem que este instancie por si mesmo
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@RequestMapping     Esta anotação mapeia solicitações HTTp para metodos de tratamento MVC e RestController
+
+Essa anotação pode ser aplicada ao nivel de classe ou nivel de metodo em um controlador.
+Em nivel de classe mapeia um caminh padrão de solicitação especifico em um controlador. Pode aplicar então anotações adicionais no nivel do metodo para tornar os mapeamentos mais especificos para os metodos do manipulador
+
+@RequestBody    mapeia o corpo HTTP para um objeto de transferencia ou dominio permitindo a desserialização automatica do corpo HTTP de entrada em um objeto
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@PathVariable       é utilizado quando o valor da variavel e passada diretamente na URL mas não como um paramentro que você passa após o sinal de interrogação (?) mas sim quando o valor faz parte da URL
+
+----------------------------------------------------------------------------------------------------
+
+@Entity 	deiz que a classe é uma entidade JPA, que representa uma tabela no banco de dados.
+
+@Id 	é usada para declarar o identificador da entidade, ou seja, representa a chave primária na tabela do banco de dados
+
+@GeneratedValue 	especifica que um valor será gerado automaticamente para este atributo. Definimos a estratégia de geração do identificador através da propriedade strategy com o GenerationType.IDENTITY
+
+A estatégia IDENTITY especifica que o valor será auto-incrementado pela própria coluna do banco de dados.Ou seja, ao inserir um novo registro, esperamos que o proprio banco de dados tome conta do incremento.
+
+@Column 	especifica que a propriedade da classe representa uma coluna na tabela do banco de dados.
+
+
+
+
